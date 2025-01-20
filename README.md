@@ -1,6 +1,6 @@
 # Optimizing CNNs with Difference of Gaussian Initialization
 
-### [Project Report 🔗](#)
+
 
 **Data Source**: [CIFAR-10 Dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
 
@@ -25,8 +25,8 @@ The study evaluates whether initializing CNN kernels with a DoG function—model
    - Compared results to prior studies that used ConvNeXt Tiny for validation.
 
 3. **Data Preprocessing**:
-   - Dataset: CIFAR-10, comprising 60,000 RGB images (32x32 pixels).
-   - Data split: 45,000 for training, 5,000 for validation, and 10,000 for testing.
+   - Dataset: CIFAR-10
+   - Data split: 45,000 for training, 5,000 for validation,10,000 for testing.
 
 4. **Hyperparameter Tuning**:
    - Investigated the influence of:

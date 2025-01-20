@@ -55,7 +55,7 @@ The table below highlights the accuracy achieved with He Normal Initialization c
 ### Visualization of Kernels
 The following visualization displays 50 randomly initialized kernels with the DoG initialization method (Share = 0.7, Gamma = 0.5):
 
-![DoG Kernels](Dog-Initialization/share.png)
+![DoG Kernels](share.png)
 
 ---
 

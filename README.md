@@ -45,12 +45,12 @@ The study evaluates whether initializing CNN kernels with a DoG function—model
 ### Hyperparameter Grid Search
 The heatmap below shows the performance (accuracy) across different combinations of the `gamma` and `share` parameters:
 
-![Hyperparameter Grid Search](Dog-Initialization/heatmap.png)
+![Hyperparameter Grid Search](heatmap.png)
 
 ### Accuracy Comparison
 The table below highlights the accuracy achieved with He Normal Initialization compared to different configurations of DoG-initialized kernels:
 
-![Accuracy Results](Dog-Initialization/result.png)
+![Accuracy Results](result.png)
 
 ### Visualization of Kernels
 The following visualization displays 50 randomly initialized kernels with the DoG initialization method (Share = 0.7, Gamma = 0.5):

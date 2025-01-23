@@ -16,18 +16,23 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Dense, Flatten, GlobalAveragePooling2D
 from tensorflow.keras.utils import to_categorical
 
-# Example usage:
-def DoG_OOCS(x, y, center, gamma, radius):
 
-    # compute sigma from radius of the center and gamma(center to surround ratio)
+def DoG_OOCS(x, y, center, gamma, radius): # compute sigma from ratio
+
+    # Adapted from: Zahra Babaiee et al., "On-Off Center-Surround Receptive Fields for Accurate and Robust Image Classification"
+    # Original code: https://github.com/ranaa-b/OOCS/blob/main/Compute_Kernels.py
+    # Modifications: Adjusted `sigma` computation and included comments for better interpretability. 
     sigma = (radius / (2 * gamma)) * (math.sqrt((1 - gamma ** 2) / (-math.log(gamma))))
     excite = (1 / (gamma ** 2)) * math.exp(-1 * ((x - center) ** 2 + (y - center) ** 2) / (2 * ((gamma * sigma) ** 2)))
     inhibit = math.exp(-1 * ((x - center) ** 2 + (y - center) ** 2) / (2 * (sigma ** 2)))
 
     return excite , inhibit
-def On_Off_Center_filters(radius, gamma, in_channels, out_channels):
+def On_Off_Center_filters(radius, gamma, in_channels, out_channels):  # size of the kernel
+    # Adapted from: Zahra Babaiee et al., "On-Off Center-Surround Receptive Fields for Accurate and Robust Image Classification"
+    # Original code: https://github.com/ranaa-b/OOCS/blob/main/Compute_Kernels.py
+    # Modifications: Adjusted `sigma` computation and included comments for better interpretability.
 
-    # size of the kernel
+   
     kernel_size = int((radius/gamma)*2-1)
     # center node index
     centerX = int((kernel_size+1)/2)

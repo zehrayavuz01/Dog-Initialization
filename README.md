@@ -76,7 +76,4 @@ Further studies are needed to refine this method for broader applications, focus
 
 ---
 
-### Usage Instructions
-- Clone this repository.
-- Ensure you have Python 3.8+ and the necessary dependencies installed.
-- Run the training script provided in the repository to experiment with the DoG initialization.
+
